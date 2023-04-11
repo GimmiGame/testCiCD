@@ -13,3 +13,7 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Run build with Gradle Wrapper
         run: ./gradlew build
+      - name: Run Coverage
+        run: |
+         chmod +x gradlew
+          ./gradlew testCoverage
