@@ -8,6 +8,7 @@ class HelloService {
 
     fun hello(): String {
         println("hello")
+        println("hello")
         return "Hello World!"
     }
 }
