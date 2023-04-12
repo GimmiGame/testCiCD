@@ -20,6 +20,9 @@ jobs:
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
+      - name: Mp Mongodb
+        run: |
+          sed -ic 's/password/${{ secrets.MONGO_PASSWORD }}/g' src/main/resources/application.yml
       - name: Run Coverage
         run: |
             chmod +x gradlew
