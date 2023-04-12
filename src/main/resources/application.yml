@@ -5,5 +5,5 @@ server:
 spring:
   data:
     mongodb:
-      uri: 'mongodb+srv://GamesApp:new-text@cluster0.3ptzslw.mongodb.net/?retryWrites=true&w=majority'
+      uri: 'mongodb+srv://GamesApp:password@cluster0.3ptzslw.mongodb.net/?retryWrites=true&w=majority'
       database: GamesApp
