@@ -22,7 +22,8 @@ jobs:
           arguments: build
       - name: Mp Mongodb
         run: |
-          sed -ic 's/password/${{ secrets.MONGO_PASSWORD }}/g' src/main/resources/application.yml
+          sed -ic 's/password/${{ secrets.MONGO_PASSWORD }}/g' src/main/resources/application.yml ;
+          rm src/main/resources/application.ymlc
       - name: Run Coverage
         run: |
             chmod +x gradlew

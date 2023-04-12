@@ -18,11 +18,16 @@ jobs:
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Mp Mongodb
         run: |
-          sed -ic 's/password/${{ secrets.MONGO_PASSWORD }}/g' src/main/resources/application.yml
+          sed -ic 's/password/${{ secrets.MONGO_PASSWORD }}/g' src/main/resources/application.yml ;
+          rm src/main/resources/application.ymlc
       - name: Build with Gradle
         uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
         with:
           arguments: build
+      - name: Remove Mongodb password
+        run: |
+          sed -ic 's/${{ secrets.MONGO_PASSWORD }}/password/g' src/main/resources/application.yml ;
+          rm src/main/resources/application.ymlc
       - name: Upload JAR
         uses: actions/upload-artifact@v2
         with:
