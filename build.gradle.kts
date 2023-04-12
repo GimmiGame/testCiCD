@@ -38,7 +38,7 @@ dependencies {
 	kapt("org.springframework.boot:spring-boot-configuration-processor")
 
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-security")
+	//implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
@@ -52,11 +52,10 @@ dependencies {
 
 
 	// Swagger
-	implementation("io.springfox:springfox-boot-starter")
+	//implementation("io.springfox:springfox-boot-starter")
 
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.springframework.security:spring-security-test")
 	testImplementation("org.mockito:mockito-core")
 	testImplementation("org.mockito.kotlin:mockito-kotlin")
 	testImplementation("org.assertj:assertj-core")
